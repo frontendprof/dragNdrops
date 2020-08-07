@@ -13,7 +13,7 @@
 
  body{
     font-family: 'Montserrat', sans-serif;
-    background-color: #eee;
+    background-color: rgb(199, 186, 186);
     color:#111;
  }
 
@@ -52,7 +52,7 @@
      justify-content: center;
      align-items:center;
      font-size:4rem;
-     border:3px dashed #111;
+     border:3px dashed rgb(173, 2, 179);
      text-align: center;
      background-color:#fff;
      transition: border-width .2s, transform .2s, background-color .4s;
@@ -68,6 +68,7 @@
  .droppable.droppable-hover{
      border-width: 5px;
      transform:scale(1.1);
+     border-color: rgb(247, 247, 6);
  }
 
  .droppable.dropped{
@@ -77,8 +78,9 @@
 
 
  .droppable.dropped span{
-    font-size:.75rem;
-    margin-top:.5rem;
+    font-size:1rem;
+    margin-bottom:.2rem;
+    font-weight: bold;
 }
 
 
@@ -89,7 +91,7 @@
 
 .draggable.dragged{
     user-select:none;
-    opacity: .1;
+    opacity: .3;
     cursor: default;
 }
 
