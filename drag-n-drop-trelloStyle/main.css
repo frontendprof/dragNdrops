@@ -58,3 +58,8 @@ header{
     text-align:center;
     margin:4px 0;
 }
+
+
+.lists .list .list-item:hover{
+    cursor: pointer;
+}
