@@ -10,7 +10,6 @@ for(let i=0;i<list_items.length;i++){
     const item = list_items[i];
 
     item.addEventListener("dragstart",function(){
-        console.log("dragstart");
         draggedItem=item;
         setTimeout(function(){
             item.style.display="none";
@@ -19,12 +18,28 @@ for(let i=0;i<list_items.length;i++){
     });
 
     item.addEventListener("dragend",function(){
-        console.log("dragnet");
         setTimeout(function(){
             draggedItem.style.display="block";
             draggedItem=null;
         },0)
     })
+
+    for(let j=0;j<lists.length;j++){
+        const list =lists[i];
+
+        list.addEventListener('dragover',function(e){
+            e.preventDefault();
+        });
+
+        list.addEventListener("dragenter",function(e){
+            e.preventDefault();
+        });
+
+        list.addEventListener("drop",function(){
+            console.log('drop');
+            this.append(draggedItem);
+        })
+    }
 
 
 
