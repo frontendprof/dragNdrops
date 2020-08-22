@@ -33,11 +33,18 @@ for(let i=0;i<list_items.length;i++){
 
         list.addEventListener("dragenter",function(e){
             e.preventDefault();
+            this.style.backgroundColor='rgba(0,0,0,.3)';
         });
+
+        list.addEventListener("dragleave",function(e){
+            this.style.backgroundColor='rgba(0,0,0,.1)';
+        })
 
         list.addEventListener("drop",function(){
             console.log('drop');
             this.append(draggedItem);
+            this.style.backgroundColor='rgba(0,0,0,.1)';
+
         })
     }
 
