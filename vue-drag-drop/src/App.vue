@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <main class="flexbox">
+      Hellow
+    </main>
   </div>
 </template>
 
