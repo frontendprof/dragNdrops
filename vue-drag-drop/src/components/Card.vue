@@ -16,13 +16,15 @@
 export default {
     props:["id","draggable"],
     methods:{
-        drop:e=>{
-            const card_id=e.dataTransfer.getData("card_id");
+        dragStart:e=>{
+            const target=e.target;
+            e.dataTransfer.setData("card_id",target.id);
 
-            const card=document.getElementById(card_id);
+            setTimeout(()=>{
+                target.style.display="none";
+            },0)
 
-            card.style.display="block";
-            e.target.appendChild(card);
+            
         }
     }
 }
